@@ -11,8 +11,8 @@ class Command(BaseCommand):
         Category.objects.all().delete()
 
         category_list = [
-            {'id': 1, 'category_name': 'Фрукты', 'category_description': 'Фрукты из Кавказа'},
-            {'id': 2, 'category_name': 'Овощи', 'category_description': 'Овощи прям с огорода'}
+            {'id': 1, 'name': 'Фрукты', 'description': 'Фрукты из Кавказа'},
+            {'id': 2, 'name': 'Овощи', 'description': 'Овощи прям с огорода'}
         ]
 
         categories_for_create = []
@@ -24,23 +24,23 @@ class Command(BaseCommand):
         Category.objects.bulk_create(categories_for_create)
 
         products_list = [
-            {'product_name': 'Картошка', 'product_description': 'Картоха из Беларуссии',
-             'product_category': Category.objects.get(pk=2), 'product_price': 100},
+            {'name': 'Картошка', 'description': 'Картоха из Беларуссии', 'image': 'картошка.png',
+             'category': Category.objects.get(pk=2), 'price': 100},
 
-            {'product_name': 'Огурец', 'product_description': 'Огурцы хрустящие',
-             'product_category': Category.objects.get(pk=2), 'product_price': 45},
+            {'name': 'Огурец', 'description': 'Огурцы хрустящие', 'image': 'огурец.png',
+             'category': Category.objects.get(pk=2), 'price': 45},
 
-            {'product_name': 'Помидор', 'product_description': 'Самые спелые, красные помидоры',
-             'product_category': Category.objects.get(pk=2), 'product_price': 45},
+            {'name': 'Помидор', 'description': 'Самые спелые, красные помидоры', 'image': 'помидор.png',
+             'category': Category.objects.get(pk=2), 'price': 45},
 
-            {'product_name': 'Банан', 'product_description': 'Бананы из Африки',
-             'product_category': Category.objects.get(pk=1), 'product_price': 120},
+            {'name': 'Банан', 'description': 'Бананы из Африки', 'image': 'банан.png',
+             'category': Category.objects.get(pk=1), 'price': 120},
 
-            {'product_name': 'Кокос', 'product_description': 'Только кокосы с высоких пальм',
-             'product_category': Category.objects.get(pk=1), 'product_price': 155},
+            {'name': 'Кокос', 'description': 'Только кокосы с высоких пальм', 'image': 'кокос.png',
+             'category': Category.objects.get(pk=1), 'price': 155},
 
-            {'product_name': 'Яблоко', 'product_description': 'Яблочки от бабули',
-             'product_category': Category.objects.get(pk=1), 'product_price': 99}
+            {'name': 'Яблоко', 'description': 'Яблочки от бабули', 'image': 'яблоко.png',
+             'category': Category.objects.get(pk=1), 'price': 99}
         ]
 
         products_for_create = []
