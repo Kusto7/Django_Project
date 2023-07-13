@@ -11,8 +11,8 @@ class Command(BaseCommand):
         Category.objects.all().delete()
 
         category_list = [
-            {'id': 1, 'name': 'Фрукты', 'description': 'Фрукты из Кавказа'},
-            {'id': 2, 'name': 'Овощи', 'description': 'Овощи прям с огорода'}
+            {'name': 'Фрукты', 'description': 'Фрукты из Кавказа'},
+            {'name': 'Овощи', 'description': 'Овощи прям с огорода'}
         ]
 
         categories_for_create = []
