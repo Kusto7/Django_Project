@@ -14,7 +14,7 @@
     <div class="row text-center">
         {% for object in object_list %}
         <div class="col-3">
-            <div class="card mb-4 box-shadow" style="width: 20rem; height: 30rem">
+            <div class="card mb-4 box-shadow" >
                 <img src="{% mediapath object.image %}" class="card-img-top">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
@@ -31,5 +31,6 @@
         </div>
         {% endfor %}
     </div>
+</div>
 
-    {% endblock %}
+{% endblock %}
